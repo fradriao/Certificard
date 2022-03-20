@@ -26,6 +26,7 @@ body {
 .perfil-foto {
   border-radius: 460px;
   max-height: 160px;
+  max-width: 160px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -52,9 +53,36 @@ body {
   border-radius: 100px;
 }
 
-.projetos {
+.contatos {
+  width: max-content;
+  margin-top: 32px;
   display: flex;
-  flex-direction: column;
+}
+
+.contatos-item {
+  list-style-type: none;
+  margin-right: 32px;
+  padding: 12px 0px 12px 0px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.contatos-item a {
+  text-decoration: none;
+  color: #1c1c1c
+}
+
+.portfolio {
+  display: grid;                    
+  grid-template-columns: 3fr 1fr;
+  gap: 16px;
+}
+
+.projetos {
+  height: 1065px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
   background: linear-gradient(230.65deg, #499cfe 27.49%, #9cc8fc 83.19%);
   margin-top: 32px;
   padding: 32px;
@@ -64,21 +92,56 @@ body {
 
 .projetos-titulo {
   list-style: none;
+  margin-bottom: 0px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 40px;
 }
 
 .projetos-item {
   list-style-type: none;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 48px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 40px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
 }
 
 .projetos-item a {
   color: #1c1c1c;
   text-decoration: none;
 }
+
+.conquistas {
+  height: 1065px;  
+  background: linear-gradient(230.65deg, #499cfe 27.49%, #9cc8fc 83.19%);
+  margin-top: 32px;
+  padding: 32px;
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+  border-radius: 20px;
+}
+
+.conquistas-titulo {
+  text-align: center;
+  padding-left: 0px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.conquistas-item {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conquistas img {
+  max-height: 100px;
+  margin-top: 30px;
+}
+
+
 
 .dark {
   background: linear-gradient(236.85deg, #375b86 27.26%, #6b87a9 96.03%);
@@ -89,7 +152,15 @@ body {
   color: #f7f7f7;
 }
 
+.dark .contatos-item a {
+  color: #f7f7f7
+}
+
 .dark .projetos {
+  color: #1c1c1c;
+}
+
+.dark .conquistas {
   color: #1c1c1c;
 }
 
@@ -98,3 +169,25 @@ body {
   color: #ffffff;
   border: 2px solid #f7f7f7;
 }
+
+::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+  background: #1C1C1C;
+  border: 1.8px solid #1C1C1C;
+  border-radius: 100px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+  background: #ECF4FF;
+  }
+  
+  ::-webkit-scrollbar-track{
+  background: #ECF4FF;
+  border-radius: 100px;
+  box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+  margin: 15px 0px;
+  }
